@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  position: absolute;
+  top: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12vw;
+  font-weight: 900;
+  font-style: italic;
+  font-family: 'Noto Sans SC', 'SimHei', sans-serif;
+  color: #2222ff;
+  text-shadow: 0.3vw 0.3vw 0 #000, -0.2vw -0.2vw 0 #000, 0 0 3vw rgba(80,80,255,0.6);
+  white-space: nowrap;
+  line-height: 1;
+  z-index: 1;
+}
+
+.grandma {
+  position: absolute;
+  bottom: 14vh;
+  left: 15%;
+  width: 42vw;
+  max-width: 500px;
+}
+
+.ball-wrapper {
+  position: absolute;
+  width: 13vw;
+  max-width: 160px;
+  min-width: 80px;
+  z-index: 10;
+  text-align: center;
+}
+
+.ball-wrapper a {
+  display: block;
+  text-decoration: none;
+}
+
+.ball-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.ball-label {
+  margin-top: 4px;
+  background: #2222ff;
+  color: #fff;
+  font-size: clamp(10px, 1.2vw, 16px);
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  display: inline-block;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.figures-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14vh;
+  overflow: hidden;
+}
+
+.figures-belt {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  width: max-content;
+  animation: scroll 14s linear infinite;
+}
+
+.figures-belt img {
+  height: 13vh;
+  width: auto;
+  margin: 0 0.5vw;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

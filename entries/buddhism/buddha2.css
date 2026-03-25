@@ -1,0 +1,79 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#b9f0ff;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* container */
+
+.scene{
+position:relative;
+width:min(70vw,600px);
+}
+
+/* background image */
+
+.bg{
+width:100%;
+display:block;
+}
+
+/* buddha overlay */
+
+.buddha{
+position:absolute;
+top:-160px;
+left:50%;
+transform:translateX(-50%);
+width:90%;
+pointer-events:none;
+}
+
+/* text */
+
+.title{
+position:absolute;
+font-weight:900;
+color:#ff00aa;
+font-size:clamp(40px,6vw,80px);
+}
+
+.tranquility{
+bottom:-100px;
+right:90px;
+}
+
+.title a{
+text-decoration:none;
+color:#ff00aa;
+}
+
+/* prepare letters */
+
+#tranquilLink span{
+display:inline-block;
+transform-origin:center;
+transition:
+transform .6s ease,
+opacity .6s ease;
+}
+
+#tranquilLink:hover span{
+opacity:0;
+transform:
+translate(
+calc((var(--i) - 5) * 18px),
+calc((var(--i) - 5) * -12px)
+)
+rotate(calc((var(--i) - 5) * 12deg))
+scale(.3);
+}

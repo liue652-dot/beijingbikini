@@ -1,0 +1,84 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+font-family:sans-serif;
+}
+
+.scene{
+width:100vw;
+height:100vh;
+background:url("buddhaimg/tranquil.jpg") center/cover no-repeat fixed;
+
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* container for stacked images */
+#stack{
+position:absolute;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+pointer-events:none;
+}
+
+/* each image layer */
+.layer{
+position:absolute;
+top:0;
+left:0;
+transform-origin:top left;
+opacity:0;
+transition:opacity .4s ease;
+}
+
+.layer.show{
+opacity:1;
+}
+
+.layer img{
+width:100%;
+display:block;
+}
+
+/* text */
+.title{
+position:absolute;
+bottom:5vh;
+left:4vw;
+
+font-size:clamp(32px,6vw,72px);
+font-weight:900;
+
+color:white;
+-webkit-text-stroke:5px #1e37ff;
+text-shadow:0 10px 20px rgba(255, 255, 255, 0.3);
+
+cursor:pointer;
+
+transition:transform .6s cubic-bezier(.2,.8,.2,1);
+}
+
+.title:hover{
+transform:
+translateY(-100px)
+scale(1.1);
+filter: drop-shadow(0 0 25px rgb(255, 0, 195));
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}

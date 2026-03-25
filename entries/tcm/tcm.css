@@ -1,0 +1,82 @@
+body{
+    margin:0;
+    background:#2b1a14;
+    font-family:sans-serif;
+}
+
+.cabinet{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(185px,1fr));
+    grid-auto-rows:1fr;
+    gap:0;
+}
+
+
+.drawer{
+    position:relative;
+    aspect-ratio:1/1;
+    background-image:url("tcmimg/cabinet.jpg");
+    background-size:cover;
+    background-position:center;
+    transition:transform .35s ease;
+}
+
+
+.drawer{
+    position:relative;
+    aspect-ratio:1/1;
+    background-image:url("tcmimg/cabinet.jpg");
+    background-size:cover;
+    background-position:center;
+
+    transition:transform .25s ease, box-shadow .25s ease;
+
+    z-index:1;
+}
+
+.herbs:hover,
+.diet:hover,
+.body:hover{
+    transform:scale(1.15);
+    box-shadow:
+        0 10px 15px rgba(0,0,0,0.45),
+        0 25px 40px rgba(0,0,0,0.35);
+
+    z-index:10;
+}
+
+
+/* Label text */
+
+.label{
+    position:absolute;
+    font-size:18px;
+    font-weight:bold;
+    color:#ffd84d;
+    text-shadow:0 0 10px red;
+    opacity:0;
+    transition:.3s;
+    pointer-events:none;
+}
+
+.label.left{
+    right:110%;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.label.right{
+    left:110%;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.label.bottom{
+    top:110%;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.drawer:hover .label{
+    opacity:1;
+}

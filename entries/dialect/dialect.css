@@ -1,0 +1,61 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ff5a00;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.screen{
+    width:90vw;
+    height:90vh;
+
+    background:#1f00ff;
+
+    border:30px solid #ff5a00;
+    box-sizing:border-box;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#screen2{
+    display:none;
+}
+
+.meme{
+    width:70%;
+    max-width:600px;
+    margin-bottom:30px;
+}
+
+button, .btn{
+    padding:10px 22px;
+    font-size:18px;
+    border:none;
+    background:#ff0000;
+    cursor:pointer;
+    margin:2px;
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+}
+
+.north{
+    background:green;
+    color:white;
+}
+
+.top-buttons{
+    margin-bottom:2px;
+}
+
+video{
+    width:80%;
+    max-width:300px;
+    margin:20px 0;
+}
